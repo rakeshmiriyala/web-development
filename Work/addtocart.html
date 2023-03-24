@@ -1,0 +1,37 @@
+<html>
+<meta charset="utf-8">
+    <head>
+        <title>New Document</title>
+        <meta name="Generator" content="Editplus">
+        <meta name="author" content="">
+        <meta name="Keywords" content="">
+        <meta name="Description" content="">
+        <link rel="stylesheet" href="addtocart.css">
+        <script type="text/javascript" src="addtocart.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="card" id="item1">
+                <img src="images/my.jpg">
+                <div class="title">Shirt</div>
+                <div>
+                    <label>size:</label>
+                    <select>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
+                        <option>XXL</option>
+                    </select>
+                </div>
+                <button onclick="addToCart(item1)">Add to cart</button>
+                <hr>
+                <a href="payment.html">Pay</a>
+            </div>
+        </div>
+        <div class="cart" id="cart">
+            <div class="title">Cart</div><hr/>
+            <div id="title"></div>
+        </div>
+    </body>
+</html>

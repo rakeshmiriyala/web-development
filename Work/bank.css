@@ -1,0 +1,28 @@
+body{
+    margin: 100px;
+}
+.custom-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.custom-info .input-box{
+    display: flex;
+    align-items: center;
+}
+.custom-info .input-box label {
+    min-width: 120px;
+
+}
+.custom-info .input-box input{
+    padding: 5px;
+    margin-bottom: 15px;
+    width: 300px;
+}
+.custom-info .input-box textarea{
+    width: 300px;
+    padding: 5px;
+}
+legend{
+    font-weight: bold;
+}
