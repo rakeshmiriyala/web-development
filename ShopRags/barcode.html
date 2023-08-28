@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .container {
+      max-width: 1020px;
+      width: 100%;
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+    
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .col {
+      flex: 1 1 50%;
+      padding: 15px;
+    }
+    
+    /* Responsive styles */
+    @media (max-width: 1020px) {
+      .container {
+        max-width: 680px;
+      }
+    }
+    
+    @media (max-width: 680px) {
+      .container {
+        max-width: 720px;
+      }
+    }
+    
+    @media (max-width: 720px) {
+      .col {
+        flex: 1 1 100%;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .container {
+        max-width: 320px;
+      }
+    }
+    
+    /* Other styles */
+    h1 {
+      text-align: center;
+    }
+    
+    p {
+      text-align: center;
+    }
+
+    .button-container {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.scan-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 18px;
+  text-decoration: none;
+  background-color:rgb(233, 110, 9);
+  color: #ffffff;
+  border-radius: 5px;
+  border: none;
+}
+
+/* Responsive styles */
+@media (max-width: 1020px) {
+  .scan-button {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 720px) {
+  .scan-button {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 640px) {
+  .scan-button {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .scan-button {
+    font-size: 10px;
+    padding: 2px 4px;
+  }
+}
+
+@media (max-width: 320px) {
+  .scan-button {
+    font-size: 8px;
+    padding: 1px 2px;
+  }
+}
+  </style>
+  <script src="html5-qrcode.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Bar Code Reader</h1>
+    <div class="row">
+      <div class="col">
+        <div style="width: 100%;" id="reader"></div>
+      </div>
+      <div class="col">
+        <h4>SCAN RESULT</h4>
+        <div id="result">Result Here</div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      function onScanSuccess(qrCodeMessage) {
+        document.getElementById('result').innerHTML = '<span class="result">' + qrCodeMessage + '</span>';
+      }
+      function onScanError(errorMessage) {
+        // Handle scan error
+      }
+      var html5QrcodeScanner = new Html5QrcodeScanner("reader", { fps: 10, qrbox: 250 });
+      html5QrcodeScanner.render(onScanSuccess, onScanError);
+    </script>
+<div class="button-container">
+  <a class="scan-button" href="addtocart.html">Add to Cart</a>
+</div>
+  </div>
+</body>
+</html>

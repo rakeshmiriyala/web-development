@@ -1,0 +1,65 @@
+body{
+    margin: 100px;
+}
+
+.custom-info .input-box{
+    display: flex;
+    align-items: center;
+}
+.custom-info .input-box label {
+    min-width: 120px;
+
+}
+.custom-info .input-box input{
+    padding: 5px;
+    margin-bottom: 15px;
+    width: 300px;
+}
+.custom-info .input-box textarea{
+    width: 300px;
+    padding: 5px;
+}
+
+
+@media (max-width: 1020px) {
+    body {
+        margin: 50px;
+    }
+}
+
+@media (max-width: 740px) {
+    body {
+        margin: 30px;
+    }
+    .intabular {
+        width: 90%;
+    }
+}
+
+@media (max-width: 620px) {
+    body {
+        margin: 20px;
+    }
+    .intabular {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        margin: 10px;
+    }
+    .intabular {
+        width: 70%;
+    }
+}
+
+@media (max-width: 320px) {
+    body {
+        margin: 5px;
+    }
+    .intabular {
+        width: 60%;
+    }
+}
+

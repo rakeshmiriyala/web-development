@@ -1,0 +1,92 @@
+.container {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .container h2 {
+    text-align: center;
+  }
+  
+  .container input[type="email"],
+  .container input[type="password"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
+  
+  .container button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  .container button:hover {
+    background-color: #45a049;
+  }
+  
+  .container .create-account {
+    text-align: center;
+    margin-top: 16px;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 1020px) {
+    .container {
+      width: 250px;
+    }
+  }
+  
+  @media (max-width: 740px) {
+    .container {
+      width: 200px;
+    }
+  }
+  
+  @media (max-width: 630px) {
+    .container {
+      width: 180px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      width: 160px;
+      padding: 10px;
+    }
+    .container h2 {
+      font-size: 20px;
+    }
+    .container input[type="email"],
+    .container input[type="password"],
+    .container button {
+      padding: 10px;
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 320px) {
+    .container {
+      padding: 5px;
+    }
+    .container h2 {
+      font-size: 18px;
+    }
+    .container input[type="email"],
+    .container input[type="password"],
+    .container button {
+      padding: 8px;
+      font-size: 12px;
+    }
+  }
